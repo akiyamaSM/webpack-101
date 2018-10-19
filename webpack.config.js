@@ -4,11 +4,13 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const isDev = process.env.NODE_ENV === "dev"
 const isProd = !isDev
 
+const js = require('./kolores.config')
+
 module.exports = {
-        entry: "./resources/js/app.js",
+        entry: js.source,
         output: {
             path: path.resolve('./dist'),
-            filename: "build.js"
+            filename: js.endpoint
         },
     devtool: "source-map",
     devServer: {
