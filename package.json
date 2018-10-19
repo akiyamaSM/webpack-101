@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=dev webpack-dev-server --hot",
+    "dev": "npm run watch & NODE_ENV=dev webpack-dev-server --hot --inline --progress --colors",
     "watch": "NODE_ENV=dev webpack --watch",
     "prod": "webpack"
   },

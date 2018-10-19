@@ -10,6 +10,9 @@ module.exports = {
             path: path.resolve('./dist'),
             filename: "build.js"
         },
+        devServer: {
+            lazy: false
+        },
         module: {
             rules: [
                 {
