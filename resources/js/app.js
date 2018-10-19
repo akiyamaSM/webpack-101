@@ -1,2 +1,1 @@
-const variable = "Houssain"
-alert('Hello' + variable)
+console.log("blala222")
