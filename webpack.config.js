@@ -10,7 +10,8 @@ module.exports = {
             path: path.resolve('./dist'),
             filename: "build.js"
         },
-        devServer: {
+    devtool: "source-map",
+    devServer: {
             lazy: false
         },
         module: {
@@ -28,6 +29,8 @@ module.exports = {
             ]
         },
         plugins: [
-            ...isProd ? [new UglifyJsPlugin()] : []
+            ...isProd ? [new UglifyJsPlugin({
+                sourceMap: false
+            })] : []
         ]
 }
